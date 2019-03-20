@@ -1,0 +1,29 @@
+<div class = "container">
+        <div class = "panel panel-primary">
+            <div class = "panel-heading">
+                <h5>MY CART</h5>
+            </div>
+            <div class = "panel-body table-responsive">
+                <table class = "table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat = "cart in carts" ng-init = "setTotals(cart)">
+                            <td>{{cart.p_name}}</td>
+                            <td>₱{{cart.p_price}}</td>
+                            <td><button type = "button" ng-click = "remove_cart(cart)" class = "btn btn-danger"><span class = "glyphicon glyphicon-remove"></span></button></td>
+                        </tr>
+                        <tr>
+                            <td align = "right">Total</td>
+                            <td>₱{{total}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
