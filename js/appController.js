@@ -2,7 +2,7 @@ angular.module('myApp', ['ngRoute'])
 
     .config(function ($routeProvider) {
         $routeProvider
-            .when('/', {
+            .when('/a', {
                 templateUrl: "html/product.html",
                 controller: 'productCtrl'
             })
@@ -10,7 +10,7 @@ angular.module('myApp', ['ngRoute'])
                 templateUrl: "html/details.html",
                 controller: 'detailsCtrl'
             })
-            .otherwise({redirectTo: '/'})
+            .otherwise({redirectTo: '/a'})
           
     })
 
