@@ -10,6 +10,7 @@ angular.module('myApp', ['ngRoute'])
                 templateUrl: "html/details.html",
                 controller: 'detailsCtrl'
             })
+            .otherwise({redirectTo: '/'})
           
     })
 
