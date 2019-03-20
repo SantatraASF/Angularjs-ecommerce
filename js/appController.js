@@ -3,11 +3,11 @@ angular.module('myApp', ['ngRoute'])
     .config(function ($routeProvider) {
         $routeProvider
             .when('/', {
-                templateUrl: "product.html",
+                templateUrl: "html/product.html",
                 controller: 'productCtrl'
             })
             .when('/details/:id', {
-                templateUrl: "details.html",
+                templateUrl: "html/details.html",
                 controller: 'detailsCtrl'
             })
           
