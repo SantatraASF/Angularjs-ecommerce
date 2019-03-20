@@ -163,3 +163,13 @@ body {
               transform: scale(1); } }
   
   /*# sourceMappingURL=style.css.map */
+
+  /* .thumbnail img{
+    height:250px;
+    width:100%;
+  } */
+
+  img.img-responsive.image-resize{
+    height: 300px;
+    /* object-fit: cover; */
+  }
