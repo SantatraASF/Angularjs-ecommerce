@@ -89,6 +89,7 @@ angular.module('myApp', ['ngRoute'])
                 });
                 return product;
             },
+            carts : []
         }
         return factory;
     })
@@ -99,11 +100,12 @@ angular.module('myApp', ['ngRoute'])
     })
 
     .controller('detailsCtrl', function ($scope, Appfactory, $routeParams) {
-        $scope.carts = [];
+        $scope.carts = Appfactory.carts;
         var post = Appfactory.getProduct($routeParams.id);
-        $scope.image = post.picture
-        $scope.title = post.name
-        $scope.details = post.details
+        $scope.image = post.picture;
+        $scope.title = post.name;
+        //$scope.details = post.details;
+        $scope.post = post;
 
         $scope.add_cart = function (det) {
             if (det) {
